@@ -425,10 +425,7 @@
 
     .name-input:focus { border-color: var(--cyan); }
 
-    /* RANK SELECT */
-    .rank-select-wrap {
-      margin-top: 18px;
-    }
+    .rank-select-wrap { margin-top: 18px; }
 
     .rank-select {
       width: 100%;
@@ -446,16 +443,9 @@
     }
 
     .rank-select:focus { border-color: var(--gold); }
+    .rank-select option { background: #0d1b2e; color: var(--white); }
 
-    .rank-select option {
-      background: #0d1b2e;
-      color: var(--white);
-    }
-
-    .select-wrapper {
-      position: relative;
-    }
-
+    .select-wrapper { position: relative; }
     .select-wrapper::after {
       content: '▼';
       position: absolute;
@@ -540,7 +530,7 @@
           <select class="rank-select" id="officer-rank">
             <option value="" disabled selected>— Selecciona tu rango actual —</option>
             <option value="Postulante">👤 Postulante</option>
-            <option value="Cadete">👮 Cadete</option>
+            <option value="Cadete">🪖 Cadete</option>
             <option value="Oficial">🚔 Oficial</option>
             <option value="Sargento">🏅 Sargento</option>
             <option value="Teniente">⭐ Teniente</option>
@@ -561,6 +551,7 @@
     <!-- SECCIÓN 1 -->
     <div class="section-title">📋 Protocolo & Procedimientos</div>
 
+    <!-- Q1 — correct: b -->
     <div class="question-card" id="q1">
       <div class="question-number">Pregunta 01</div>
       <div class="question-text">¿Cuál es el primer paso al detener a un sospechoso durante una patrulla en roleplay?</div>
@@ -573,69 +564,75 @@
       <div class="feedback-msg" id="fb1"></div>
     </div>
 
+    <!-- Q2 — correct: c — ¿Qué significa 10-4? -->
     <div class="question-card" id="q2">
       <div class="question-number">Pregunta 02</div>
-      <div class="question-text">¿Qué significa el código 10-4 en comunicación por radio?</div>
+      <div class="question-text">¿Qué significa el código <strong>10-4</strong> en las comunicaciones de radio del servidor?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q2" value="a"/><span class="option-circle">A</span> Necesito refuerzos</label>
-        <label class="option-label"><input type="radio" name="q2" value="b"/><span class="option-circle">B</span> Mensaje recibido / Entendido</label>
-        <label class="option-label"><input type="radio" name="q2" value="c"/><span class="option-circle">C</span> En camino a la escena</label>
-        <label class="option-label"><input type="radio" name="q2" value="d"/><span class="option-circle">D</span> Sospechoso armado</label>
+        <label class="option-label"><input type="radio" name="q2" value="a"/><span class="option-circle">A</span> Solicitar unidad adicional</label>
+        <label class="option-label"><input type="radio" name="q2" value="b"/><span class="option-circle">B</span> Fuera de servicio</label>
+        <label class="option-label"><input type="radio" name="q2" value="c"/><span class="option-circle">C</span> Copiado / Mensaje recibido</label>
+        <label class="option-label"><input type="radio" name="q2" value="d"/><span class="option-circle">D</span> Emergencia crítica</label>
       </div>
       <div class="feedback-msg" id="fb2"></div>
     </div>
 
+    <!-- Q3 — correct: a — ¿Qué código indica "en camino a la escena"? → 10-74 -->
     <div class="question-card" id="q3">
       <div class="question-number">Pregunta 03</div>
-      <div class="question-text">¿Qué código de radio se utiliza para indicar "en camino / en ruta a la escena"?</div>
+      <div class="question-text">¿Qué código de radio se utiliza para indicar que una unidad va <strong>hacia un destino / en ruta a la escena</strong>?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q3" value="a"/><span class="option-circle">A</span> 10-4</label>
+        <label class="option-label"><input type="radio" name="q3" value="a"/><span class="option-circle">A</span> 10-74</label>
         <label class="option-label"><input type="radio" name="q3" value="b"/><span class="option-circle">B</span> 10-7</label>
-        <label class="option-label"><input type="radio" name="q3" value="c"/><span class="option-circle">C</span> 10-76</label>
-        <label class="option-label"><input type="radio" name="q3" value="d"/><span class="option-circle">D</span> 10-99</label>
+        <label class="option-label"><input type="radio" name="q3" value="c"/><span class="option-circle">C</span> 10-30</label>
+        <label class="option-label"><input type="radio" name="q3" value="d"/><span class="option-circle">D</span> 10-8</label>
       </div>
       <div class="feedback-msg" id="fb3"></div>
     </div>
 
+    <!-- Q4 — correct: d -->
     <div class="question-card" id="q4">
       <div class="question-number">Pregunta 04</div>
-      <div class="question-text">Un civil se niega a identificarse durante una parada de tráfico, ¿qué debe hacer el oficial?</div>
+      <div class="question-text">Un civil se niega a identificarse durante una parada de tráfico (10-20), ¿qué debe hacer el oficial?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q4" value="a"/><span class="option-circle">A</span> Sacar el arma inmediatamente</label>
         <label class="option-label"><input type="radio" name="q4" value="b"/><span class="option-circle">B</span> Dejarlo ir sin consecuencias</label>
-        <label class="option-label"><input type="radio" name="q4" value="c"/><span class="option-circle">C</span> Informar sobre la obligación legal, pedir que salga del vehículo y notificar por radio</label>
-        <label class="option-label"><input type="radio" name="q4" value="d"/><span class="option-circle">D</span> Ignorar la situación</label>
+        <label class="option-label"><input type="radio" name="q4" value="c"/><span class="option-circle">C</span> Ignorar la situación</label>
+        <label class="option-label"><input type="radio" name="q4" value="d"/><span class="option-circle">D</span> Informar sobre la obligación legal, pedir que salga del vehículo y notificar por radio</label>
       </div>
       <div class="feedback-msg" id="fb4"></div>
     </div>
 
+    <!-- Q5 — correct: a -->
     <div class="question-card" id="q5">
       <div class="question-number">Pregunta 05</div>
       <div class="question-text">¿Cuándo está permitido usar la fuerza letal en el servidor RP?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q5" value="a"/><span class="option-circle">A</span> Cuando el sospechoso corre</label>
-        <label class="option-label"><input type="radio" name="q5" value="b"/><span class="option-circle">B</span> Solo si el oficial tiene hambre de acción</label>
-        <label class="option-label"><input type="radio" name="q5" value="c"/><span class="option-circle">C</span> Cuando existe amenaza real e inminente a la vida y se agotaron otras opciones</label>
+        <label class="option-label"><input type="radio" name="q5" value="a"/><span class="option-circle">A</span> Cuando existe amenaza real e inminente a la vida y se agotaron otras opciones</label>
+        <label class="option-label"><input type="radio" name="q5" value="b"/><span class="option-circle">B</span> Cuando el sospechoso corre</label>
+        <label class="option-label"><input type="radio" name="q5" value="c"/><span class="option-circle">C</span> Solo si el oficial tiene hambre de acción</label>
         <label class="option-label"><input type="radio" name="q5" value="d"/><span class="option-circle">D</span> Siempre que lo ordene un superior</label>
       </div>
       <div class="feedback-msg" id="fb5"></div>
     </div>
 
+    <!-- Q6 — correct: c -->
     <div class="question-card" id="q6">
       <div class="question-number">Pregunta 06</div>
       <div class="question-text">¿Cuál es el procedimiento correcto para registrar a un detenido en un roleplay?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q6" value="a"/><span class="option-circle">A</span> Pedirle que entregue sus objetos voluntariamente sin más trámite</label>
-        <label class="option-label"><input type="radio" name="q6" value="b"/><span class="option-circle">B</span> Esposarlo, informarle que será registrado, realizar el cacheo y documentar los objetos encontrados</label>
-        <label class="option-label"><input type="radio" name="q6" value="c"/><span class="option-circle">C</span> Registrarlo sin informarle nada para no darle ventaja</label>
+        <label class="option-label"><input type="radio" name="q6" value="b"/><span class="option-circle">B</span> Registrarlo sin informarle nada para no darle ventaja</label>
+        <label class="option-label"><input type="radio" name="q6" value="c"/><span class="option-circle">C</span> Esposarlo, informarle que será registrado, realizar el cacheo y documentar los objetos encontrados</label>
         <label class="option-label"><input type="radio" name="q6" value="d"/><span class="option-circle">D</span> Esperar a que llegue el Sargento para que autorice el registro</label>
       </div>
       <div class="feedback-msg" id="fb6"></div>
     </div>
 
+    <!-- Q7 — correct: b -->
     <div class="question-card" id="q7">
       <div class="question-number">Pregunta 07</div>
-      <div class="question-text">¿Qué debe hacer un oficial al llegar primero a una escena de crimen activa antes de que lleguen refuerzos?</div>
+      <div class="question-text">¿Qué debe hacer un oficial al llegar primero a una escena de crimen activa (10-23) antes de que lleguen refuerzos?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q7" value="a"/><span class="option-circle">A</span> Entrar de inmediato para resolver la situación solo</label>
         <label class="option-label"><input type="radio" name="q7" value="b"/><span class="option-circle">B</span> Asegurar el perímetro externo, reportar por radio la situación y esperar apoyo antes de actuar</label>
@@ -648,42 +645,46 @@
     <!-- SECCIÓN 2 -->
     <div class="section-title">🎭 Rol & Normativas RP</div>
 
+    <!-- Q8 — correct: d -->
     <div class="question-card" id="q8">
       <div class="question-number">Pregunta 08</div>
       <div class="question-text">¿Qué es el "Powergaming" en el roleplay policial?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q8" value="a"/><span class="option-circle">A</span> Jugar con mucha energía en el servidor</label>
-        <label class="option-label"><input type="radio" name="q8" value="b"/><span class="option-circle">B</span> Forzar acciones imposibles o irreales sobre otros jugadores sin darles oportunidad de respuesta</label>
-        <label class="option-label"><input type="radio" name="q8" value="c"/><span class="option-circle">C</span> Tener muchos recursos o vehículos en el servidor</label>
-        <label class="option-label"><input type="radio" name="q8" value="d"/><span class="option-circle">D</span> Subir de rango de forma acelerada</label>
+        <label class="option-label"><input type="radio" name="q8" value="b"/><span class="option-circle">B</span> Tener muchos recursos o vehículos en el servidor</label>
+        <label class="option-label"><input type="radio" name="q8" value="c"/><span class="option-circle">C</span> Subir de rango de forma acelerada</label>
+        <label class="option-label"><input type="radio" name="q8" value="d"/><span class="option-circle">D</span> Forzar acciones imposibles o irreales sobre otros jugadores sin darles oportunidad de respuesta</label>
       </div>
       <div class="feedback-msg" id="fb8"></div>
     </div>
 
+    <!-- Q9 — correct: a -->
     <div class="question-card" id="q9">
       <div class="question-number">Pregunta 09</div>
       <div class="question-text">¿Qué significa "Metagaming" y por qué es una falta grave?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q9" value="a"/><span class="option-circle">A</span> Jugar demasiado tiempo seguido sin descansar</label>
-        <label class="option-label"><input type="radio" name="q9" value="b"/><span class="option-circle">B</span> Usar información OOC (fuera del personaje) para beneficiar al personaje dentro del roleplay</label>
+        <label class="option-label"><input type="radio" name="q9" value="a"/><span class="option-circle">A</span> Usar información OOC (fuera del personaje) para beneficiar al personaje dentro del roleplay</label>
+        <label class="option-label"><input type="radio" name="q9" value="b"/><span class="option-circle">B</span> Jugar demasiado tiempo seguido sin descansar</label>
         <label class="option-label"><input type="radio" name="q9" value="c"/><span class="option-circle">C</span> Cambiar de personaje durante una escena activa</label>
         <label class="option-label"><input type="radio" name="q9" value="d"/><span class="option-circle">D</span> Hablar por el micrófono fuera del personaje en el chat de voz</label>
       </div>
       <div class="feedback-msg" id="fb9"></div>
     </div>
 
+    <!-- Q10 — correct: c -->
     <div class="question-card" id="q10">
       <div class="question-number">Pregunta 10</div>
       <div class="question-text">¿Qué es el "RDM" (Random Death Match) y cuál es su consecuencia en el servidor?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q10" value="a"/><span class="option-circle">A</span> Una modalidad de entrenamiento de combate permitida</label>
-        <label class="option-label"><input type="radio" name="q10" value="b"/><span class="option-circle">B</span> Matar a jugadores sin ninguna razón de roleplay válida — es una falta grave que puede resultar en sanción o ban</label>
-        <label class="option-label"><input type="radio" name="q10" value="c"/><span class="option-circle">C</span> Una pelea pactada entre dos jugadores con permiso del staff</label>
+        <label class="option-label"><input type="radio" name="q10" value="b"/><span class="option-circle">B</span> Una pelea pactada entre dos jugadores con permiso del staff</label>
+        <label class="option-label"><input type="radio" name="q10" value="c"/><span class="option-circle">C</span> Matar a jugadores sin ninguna razón de roleplay válida — es una falta grave que puede resultar en sanción o ban</label>
         <label class="option-label"><input type="radio" name="q10" value="d"/><span class="option-circle">D</span> Disparar accidentalmente a un compañero en escena</label>
       </div>
       <div class="feedback-msg" id="fb10"></div>
     </div>
 
+    <!-- Q11 — correct: b -->
     <div class="question-card" id="q11">
       <div class="question-number">Pregunta 11</div>
       <div class="question-text">¿Qué es el "VDM" (Vehicle Death Match) y está permitido?</div>
@@ -696,37 +697,40 @@
       <div class="feedback-msg" id="fb11"></div>
     </div>
 
+    <!-- Q12 — correct: d -->
     <div class="question-card" id="q12">
       <div class="question-number">Pregunta 12</div>
       <div class="question-text">¿Qué significa "CK" (Character Kill) y cuándo puede aplicarse?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q12" value="a"/><span class="option-circle">A</span> Cuando un jugador quiere cambiar de personaje voluntariamente</label>
-        <label class="option-label"><input type="radio" name="q12" value="b"/><span class="option-circle">B</span> La muerte permanente del personaje, aplicable solo bajo circunstancias extremas previamente autorizadas o acordadas</label>
-        <label class="option-label"><input type="radio" name="q12" value="c"/><span class="option-circle">C</span> Eliminar a un jugador del servidor por mal comportamiento</label>
-        <label class="option-label"><input type="radio" name="q12" value="d"/><span class="option-circle">D</span> Cuando un oficial cae en servicio durante una patrulla normal</label>
+        <label class="option-label"><input type="radio" name="q12" value="b"/><span class="option-circle">B</span> Eliminar a un jugador del servidor por mal comportamiento</label>
+        <label class="option-label"><input type="radio" name="q12" value="c"/><span class="option-circle">C</span> Cuando un oficial cae en servicio durante una patrulla normal</label>
+        <label class="option-label"><input type="radio" name="q12" value="d"/><span class="option-circle">D</span> La muerte permanente del personaje, aplicable solo bajo circunstancias extremas previamente autorizadas o acordadas</label>
       </div>
       <div class="feedback-msg" id="fb12"></div>
     </div>
 
+    <!-- Q13 — correct: a -->
     <div class="question-card" id="q13">
       <div class="question-number">Pregunta 13</div>
       <div class="question-text">Durante una negociación de rehenes, ¿cuál es la actitud correcta del oficial de apoyo?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q13" value="a"/><span class="option-circle">A</span> Entrar a la fuerza de inmediato para resolver el problema rápido</label>
-        <label class="option-label"><input type="radio" name="q13" value="b"/><span class="option-circle">B</span> Mantener calma, aislar la zona, comunicar con el negociador designado y esperar órdenes tácticas</label>
+        <label class="option-label"><input type="radio" name="q13" value="a"/><span class="option-circle">A</span> Mantener calma, aislar la zona, comunicar con el negociador designado y esperar órdenes tácticas</label>
+        <label class="option-label"><input type="radio" name="q13" value="b"/><span class="option-circle">B</span> Entrar a la fuerza de inmediato para resolver el problema rápido</label>
         <label class="option-label"><input type="radio" name="q13" value="c"/><span class="option-circle">C</span> Retirarse del lugar para no interferir</label>
         <label class="option-label"><input type="radio" name="q13" value="d"/><span class="option-circle">D</span> Abrir fuego desde lejos sin coordinación</label>
       </div>
       <div class="feedback-msg" id="fb13"></div>
     </div>
 
+    <!-- Q14 — correct: c -->
     <div class="question-card" id="q14">
       <div class="question-number">Pregunta 14</div>
       <div class="question-text">¿Qué es el "FearRP" y cómo debe aplicarse en el roleplay?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q14" value="a"/><span class="option-circle">A</span> Un modo de juego donde los personajes no pueden morir</label>
-        <label class="option-label"><input type="radio" name="q14" value="b"/><span class="option-circle">B</span> La obligación de que el personaje actúe con miedo realista cuando tiene una amenaza directa (ej: arma apuntándole), siguiendo la lógica de supervivencia</label>
-        <label class="option-label"><input type="radio" name="q14" value="c"/><span class="option-circle">C</span> Un sistema de puntos por comportamiento durante escenas de terror</label>
+        <label class="option-label"><input type="radio" name="q14" value="b"/><span class="option-circle">B</span> Un sistema de puntos por comportamiento durante escenas de terror</label>
+        <label class="option-label"><input type="radio" name="q14" value="c"/><span class="option-circle">C</span> La obligación de que el personaje actúe con miedo realista cuando tiene una amenaza directa (ej: arma apuntándole), siguiendo la lógica de supervivencia</label>
         <label class="option-label"><input type="radio" name="q14" value="d"/><span class="option-circle">D</span> El miedo que sienten los jugadores nuevos en su primera patrulla</label>
       </div>
       <div class="feedback-msg" id="fb14"></div>
@@ -735,6 +739,7 @@
     <!-- SECCIÓN 3 -->
     <div class="section-title">⭐ Cadena de Mando & Liderazgo</div>
 
+    <!-- Q15 — correct: b -->
     <div class="question-card" id="q15">
       <div class="question-number">Pregunta 15</div>
       <div class="question-text">¿Cuál es el orden correcto de rangos de menor a mayor en Police Old Stars RP?</div>
@@ -747,42 +752,46 @@
       <div class="feedback-msg" id="fb15"></div>
     </div>
 
+    <!-- Q16 — correct: d -->
     <div class="question-card" id="q16">
       <div class="question-number">Pregunta 16</div>
       <div class="question-text">Un Cadete recibe una orden de un Oficial que considera incorrecta, ¿qué debe hacer?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q16" value="a"/><span class="option-circle">A</span> Ignorar la orden completamente y actuar por su cuenta</label>
-        <label class="option-label"><input type="radio" name="q16" value="b"/><span class="option-circle">B</span> Obedecer y luego reportar su desacuerdo al superior siguiente por los canales correctos</label>
-        <label class="option-label"><input type="radio" name="q16" value="c"/><span class="option-circle">C</span> Discutir frente a todos en el chat general del servidor</label>
-        <label class="option-label"><input type="radio" name="q16" value="d"/><span class="option-circle">D</span> Abandonar la escena inmediatamente</label>
+        <label class="option-label"><input type="radio" name="q16" value="b"/><span class="option-circle">B</span> Discutir frente a todos en el chat general del servidor</label>
+        <label class="option-label"><input type="radio" name="q16" value="c"/><span class="option-circle">C</span> Abandonar la escena inmediatamente</label>
+        <label class="option-label"><input type="radio" name="q16" value="d"/><span class="option-circle">D</span> Obedecer y luego reportar su desacuerdo al superior siguiente por los canales correctos</label>
       </div>
       <div class="feedback-msg" id="fb16"></div>
     </div>
 
+    <!-- Q17 — correct: a -->
     <div class="question-card" id="q17">
       <div class="question-number">Pregunta 17</div>
       <div class="question-text">¿Cuál es la responsabilidad principal de un Sargento dentro del servidor?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q17" value="a"/><span class="option-circle">A</span> Solo patrullar calles sin asumir responsabilidades extras</label>
-        <label class="option-label"><input type="radio" name="q17" value="b"/><span class="option-circle">B</span> Supervisar y guiar a Cadetes y Oficiales, mantener el orden y apoyar decisiones tácticas</label>
+        <label class="option-label"><input type="radio" name="q17" value="a"/><span class="option-circle">A</span> Supervisar y guiar a Cadetes y Oficiales, mantener el orden y apoyar decisiones tácticas</label>
+        <label class="option-label"><input type="radio" name="q17" value="b"/><span class="option-circle">B</span> Solo patrullar calles sin asumir responsabilidades extras</label>
         <label class="option-label"><input type="radio" name="q17" value="c"/><span class="option-circle">C</span> Hacer reportes administrativos únicamente desde la base</label>
         <label class="option-label"><input type="radio" name="q17" value="d"/><span class="option-circle">D</span> Reemplazar al General en todas sus funciones cuando no está presente</label>
       </div>
       <div class="feedback-msg" id="fb17"></div>
     </div>
 
+    <!-- Q18 — correct: c -->
     <div class="question-card" id="q18">
       <div class="question-number">Pregunta 18</div>
       <div class="question-text">¿Qué actitud define a un buen General dentro de Police Old Stars RP?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q18" value="a"/><span class="option-circle">A</span> Abusar de su autoridad y tomar decisiones siempre de forma unilateral</label>
-        <label class="option-label"><input type="radio" name="q18" value="b"/><span class="option-circle">B</span> Liderar con el ejemplo, tomar decisiones justas, mantener la cohesión del equipo y representar el servidor con profesionalismo</label>
-        <label class="option-label"><input type="radio" name="q18" value="c"/><span class="option-circle">C</span> Solo dar órdenes sin participar activamente en escenas</label>
+        <label class="option-label"><input type="radio" name="q18" value="b"/><span class="option-circle">B</span> Solo dar órdenes sin participar activamente en escenas</label>
+        <label class="option-label"><input type="radio" name="q18" value="c"/><span class="option-circle">C</span> Liderar con el ejemplo, tomar decisiones justas, mantener la cohesión del equipo y representar el servidor con profesionalismo</label>
         <label class="option-label"><input type="radio" name="q18" value="d"/><span class="option-circle">D</span> Favorecer siempre a sus amigos por encima de los protocolos</label>
       </div>
       <div class="feedback-msg" id="fb18"></div>
     </div>
 
+    <!-- Q19 — correct: b -->
     <div class="question-card" id="q19">
       <div class="question-number">Pregunta 19</div>
       <div class="question-text">¿Qué debe hacer un Oficial si un Sargento le da una orden que viola claramente el reglamento del servidor?</div>
@@ -795,14 +804,15 @@
       <div class="feedback-msg" id="fb19"></div>
     </div>
 
+    <!-- Q20 — correct: d -->
     <div class="question-card" id="q20">
       <div class="question-number">Pregunta 20</div>
       <div class="question-text">¿Cuál es el propósito principal de un Postulante dentro de la unidad policial?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q20" value="a"/><span class="option-circle">A</span> Poder tomar decisiones operativas desde el primer día</label>
-        <label class="option-label"><input type="radio" name="q20" value="b"/><span class="option-circle">B</span> Aprender el reglamento, observar y entrenarse bajo la supervisión de rangos superiores antes de asumir responsabilidades</label>
-        <label class="option-label"><input type="radio" name="q20" value="c"/><span class="option-circle">C</span> Sustituir a los Oficiales en patrullaje cuando faltan</label>
-        <label class="option-label"><input type="radio" name="q20" value="d"/><span class="option-circle">D</span> Gestionar las comunicaciones de radio del turno</label>
+        <label class="option-label"><input type="radio" name="q20" value="b"/><span class="option-circle">B</span> Sustituir a los Oficiales en patrullaje cuando faltan</label>
+        <label class="option-label"><input type="radio" name="q20" value="c"/><span class="option-circle">C</span> Gestionar las comunicaciones de radio del turno</label>
+        <label class="option-label"><input type="radio" name="q20" value="d"/><span class="option-circle">D</span> Aprender el reglamento, observar y entrenarse bajo la supervisión de rangos superiores antes de asumir responsabilidades</label>
       </div>
       <div class="feedback-msg" id="fb20"></div>
     </div>
@@ -810,42 +820,46 @@
     <!-- SECCIÓN 4 -->
     <div class="section-title">🔫 Situaciones Tácticas</div>
 
+    <!-- Q21 — correct: c -->
     <div class="question-card" id="q21">
       <div class="question-number">Pregunta 21</div>
-      <div class="question-text">Al llegar a una escena activa de tiroteo, ¿cuál es la primera acción correcta?</div>
+      <div class="question-text">Al llegar a una escena activa de tiroteo (10-13 — Detonaciones/Disparos), ¿cuál es la primera acción correcta?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q21" value="a"/><span class="option-circle">A</span> Correr hacia el centro del tiroteo para detenerlo rápido</label>
-        <label class="option-label"><input type="radio" name="q21" value="b"/><span class="option-circle">B</span> Buscar cobertura, evaluar la situación, comunicar por radio y esperar coordinación</label>
-        <label class="option-label"><input type="radio" name="q21" value="c"/><span class="option-circle">C</span> Disparar a todo lo que se mueva</label>
+        <label class="option-label"><input type="radio" name="q21" value="b"/><span class="option-circle">B</span> Disparar a todo lo que se mueva</label>
+        <label class="option-label"><input type="radio" name="q21" value="c"/><span class="option-circle">C</span> Buscar cobertura, evaluar la situación, comunicar por radio y esperar coordinación</label>
         <label class="option-label"><input type="radio" name="q21" value="d"/><span class="option-circle">D</span> Desconectarse para evitar el riesgo</label>
       </div>
       <div class="feedback-msg" id="fb21"></div>
     </div>
 
+    <!-- Q22 — correct: a -->
     <div class="question-card" id="q22">
       <div class="question-number">Pregunta 22</div>
       <div class="question-text">¿Qué es un "perímetro" y para qué sirve en una escena activa?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q22" value="a"/><span class="option-circle">A</span> Un tipo de vehículo blindado policial</label>
-        <label class="option-label"><input type="radio" name="q22" value="b"/><span class="option-circle">B</span> El área de descanso y estacionamiento de los oficiales</label>
-        <label class="option-label"><input type="radio" name="q22" value="c"/><span class="option-circle">C</span> Una zona de contención alrededor de la escena para evitar que sospechosos escapen y proteger civiles</label>
+        <label class="option-label"><input type="radio" name="q22" value="a"/><span class="option-circle">A</span> Una zona de contención alrededor de la escena para evitar que sospechosos escapen y proteger civiles</label>
+        <label class="option-label"><input type="radio" name="q22" value="b"/><span class="option-circle">B</span> Un tipo de vehículo blindado policial</label>
+        <label class="option-label"><input type="radio" name="q22" value="c"/><span class="option-circle">C</span> El área de descanso y estacionamiento de los oficiales</label>
         <label class="option-label"><input type="radio" name="q22" value="d"/><span class="option-circle">D</span> El registro escrito de todos los arrestos realizados en el turno</label>
       </div>
       <div class="feedback-msg" id="fb22"></div>
     </div>
 
+    <!-- Q23 — correct: d -->
     <div class="question-card" id="q23">
       <div class="question-number">Pregunta 23</div>
       <div class="question-text">Un compañero oficial actúa de forma corrupta dentro del RP, ¿qué haces?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q23" value="a"/><span class="option-circle">A</span> Participar con él para no quedar mal delante del equipo</label>
         <label class="option-label"><input type="radio" name="q23" value="b"/><span class="option-circle">B</span> Ignorarlo, no es tu problema ni tu responsabilidad</label>
-        <label class="option-label"><input type="radio" name="q23" value="c"/><span class="option-circle">C</span> Reportarlo al Sargento o superior correspondiente con evidencia, respetando los canales internos</label>
-        <label class="option-label"><input type="radio" name="q23" value="d"/><span class="option-circle">D</span> Publicarlo inmediatamente en el chat general para que todos lo sepan</label>
+        <label class="option-label"><input type="radio" name="q23" value="c"/><span class="option-circle">C</span> Publicarlo inmediatamente en el chat general para que todos lo sepan</label>
+        <label class="option-label"><input type="radio" name="q23" value="d"/><span class="option-circle">D</span> Reportarlo al Sargento o superior correspondiente con evidencia, respetando los canales internos</label>
       </div>
       <div class="feedback-msg" id="fb23"></div>
     </div>
 
+    <!-- Q24 — correct: b -->
     <div class="question-card" id="q24">
       <div class="question-number">Pregunta 24</div>
       <div class="question-text">¿Cuál es la distancia táctica mínima recomendada al hablar con un sospechoso potencialmente armado?</div>
@@ -858,12 +872,13 @@
       <div class="feedback-msg" id="fb24"></div>
     </div>
 
+    <!-- Q25 — correct: a -->
     <div class="question-card" id="q25">
       <div class="question-number">Pregunta 25</div>
-      <div class="question-text">Durante una persecución vehicular de alta velocidad, el sospechoso se detiene de repente. ¿Cuál es el protocolo correcto?</div>
+      <div class="question-text">Durante una persecución vehicular de alta velocidad (10-80), el sospechoso se detiene de repente. ¿Cuál es el protocolo correcto?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q25" value="a"/><span class="option-circle">A</span> Salir corriendo del patrullero e inmovilizarlo con las manos de inmediato</label>
-        <label class="option-label"><input type="radio" name="q25" value="b"/><span class="option-circle">B</span> Mantener distancia de seguridad, posicionarse tácticamente con cobertura, dar instrucciones por altavoz y esperar refuerzos si es necesario</label>
+        <label class="option-label"><input type="radio" name="q25" value="a"/><span class="option-circle">A</span> Mantener distancia de seguridad, posicionarse tácticamente con cobertura, dar instrucciones por altavoz y esperar refuerzos si es necesario</label>
+        <label class="option-label"><input type="radio" name="q25" value="b"/><span class="option-circle">B</span> Salir corriendo del patrullero e inmovilizarlo con las manos de inmediato</label>
         <label class="option-label"><input type="radio" name="q25" value="c"/><span class="option-circle">C</span> Embestir el vehículo para evitar que escape</label>
         <label class="option-label"><input type="radio" name="q25" value="d"/><span class="option-circle">D</span> Esperar a que el sospechoso tome la iniciativa</label>
       </div>
@@ -871,52 +886,56 @@
     </div>
 
     <!-- SECCIÓN 5 -->
-    <div class="section-title">📡 Comunicaciones & Documentación</div>
+    <div class="section-title">📡 Comunicaciones & Códigos de Radio</div>
 
+    <!-- Q26 — correct: c -->
     <div class="question-card" id="q26">
       <div class="question-number">Pregunta 26</div>
       <div class="question-text">¿Qué información debe incluir un reporte de arresto completo en el RP?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q26" value="a"/><span class="option-circle">A</span> Solo el nombre del detenido y el motivo del arresto</label>
-        <label class="option-label"><input type="radio" name="q26" value="b"/><span class="option-circle">B</span> Nombre del detenido, cargos, evidencia recolectada, testigos, oficial que realizó el arresto, hora y lugar</label>
-        <label class="option-label"><input type="radio" name="q26" value="c"/><span class="option-circle">C</span> Solo el número de placa del oficial y la hora</label>
+        <label class="option-label"><input type="radio" name="q26" value="b"/><span class="option-circle">B</span> Solo el número de placa del oficial y la hora</label>
+        <label class="option-label"><input type="radio" name="q26" value="c"/><span class="option-circle">C</span> Nombre del detenido, cargos, evidencia recolectada, testigos, oficial que realizó el arresto, hora y lugar</label>
         <label class="option-label"><input type="radio" name="q26" value="d"/><span class="option-circle">D</span> El reporte lo hace el Sargento, el oficial no necesita documentar nada</label>
       </div>
       <div class="feedback-msg" id="fb26"></div>
     </div>
 
+    <!-- Q27 — correct: d — código fuera de servicio → 10-7 -->
     <div class="question-card" id="q27">
       <div class="question-number">Pregunta 27</div>
-      <div class="question-text">¿Qué código 10 se usa para indicar que una unidad está fuera de servicio?</div>
+      <div class="question-text">¿Qué código de radio se usa para indicar que una unidad está <strong>fuera de servicio</strong>?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q27" value="a"/><span class="option-circle">A</span> 10-4</label>
-        <label class="option-label"><input type="radio" name="q27" value="b"/><span class="option-circle">B</span> 10-7</label>
-        <label class="option-label"><input type="radio" name="q27" value="c"/><span class="option-circle">C</span> 10-8</label>
-        <label class="option-label"><input type="radio" name="q27" value="d"/><span class="option-circle">D</span> 10-20</label>
+        <label class="option-label"><input type="radio" name="q27" value="b"/><span class="option-circle">B</span> 10-8</label>
+        <label class="option-label"><input type="radio" name="q27" value="c"/><span class="option-circle">C</span> 10-20</label>
+        <label class="option-label"><input type="radio" name="q27" value="d"/><span class="option-circle">D</span> 10-7</label>
       </div>
       <div class="feedback-msg" id="fb27"></div>
     </div>
 
+    <!-- Q28 — correct: b — 10-50 = EMERGENCIA -->
     <div class="question-card" id="q28">
       <div class="question-number">Pregunta 28</div>
-      <div class="question-text">¿Cuándo se usa el código 10-99 en comunicaciones de radio?</div>
+      <div class="question-text">¿Qué código de radio se utiliza para declarar una <strong>EMERGENCIA</strong> que requiere respuesta inmediata de todas las unidades?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q28" value="a"/><span class="option-circle">A</span> Para indicar que la unidad está en pausa de almuerzo</label>
-        <label class="option-label"><input type="radio" name="q28" value="b"/><span class="option-circle">B</span> Para señalar una emergencia crítica / oficial en peligro, requiriendo respuesta inmediata de todas las unidades</label>
-        <label class="option-label"><input type="radio" name="q28" value="c"/><span class="option-circle">C</span> Para confirmar que un detenido fue procesado</label>
-        <label class="option-label"><input type="radio" name="q28" value="d"/><span class="option-circle">D</span> Para solicitar una unidad de refuerzo estándar</label>
+        <label class="option-label"><input type="radio" name="q28" value="a"/><span class="option-circle">A</span> 10-32</label>
+        <label class="option-label"><input type="radio" name="q28" value="b"/><span class="option-circle">B</span> 10-50</label>
+        <label class="option-label"><input type="radio" name="q28" value="c"/><span class="option-circle">C</span> 10-43</label>
+        <label class="option-label"><input type="radio" name="q28" value="d"/><span class="option-circle">D</span> 10-9</label>
       </div>
       <div class="feedback-msg" id="fb28"></div>
     </div>
 
+    <!-- Q29 — correct: a — 10-30 = Silencio en radio -->
     <div class="question-card" id="q29">
       <div class="question-number">Pregunta 29</div>
-      <div class="question-text">¿Por qué es importante mantener las comunicaciones de radio breves y claras durante una operación?</div>
+      <div class="question-text">¿Qué código de radio se usa para pedir <strong>silencio en el canal</strong> durante una operación crítica?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q29" value="a"/><span class="option-circle">A</span> Para ahorrar batería en los radios del servidor</label>
-        <label class="option-label"><input type="radio" name="q29" value="b"/><span class="option-circle">B</span> Para no saturar el canal, evitar confusiones y garantizar que información crítica llegue a tiempo en situaciones de alta presión</label>
-        <label class="option-label"><input type="radio" name="q29" value="c"/><span class="option-circle">C</span> Porque las conversaciones largas por radio están penalizadas con puntos negativos</label>
-        <label class="option-label"><input type="radio" name="q29" value="d"/><span class="option-circle">D</span> Solo los Sargentos pueden hacer transmisiones largas</label>
+        <label class="option-label"><input type="radio" name="q29" value="a"/><span class="option-circle">A</span> 10-30</label>
+        <label class="option-label"><input type="radio" name="q29" value="b"/><span class="option-circle">B</span> 10-17</label>
+        <label class="option-label"><input type="radio" name="q29" value="c"/><span class="option-circle">C</span> 10-16</label>
+        <label class="option-label"><input type="radio" name="q29" value="d"/><span class="option-circle">D</span> 10-6</label>
       </div>
       <div class="feedback-msg" id="fb29"></div>
     </div>
@@ -924,18 +943,20 @@
     <!-- SECCIÓN 6 -->
     <div class="section-title">⚖️ Ética & Conducta Profesional</div>
 
+    <!-- Q30 — correct: d -->
     <div class="question-card" id="q30">
       <div class="question-number">Pregunta 30</div>
       <div class="question-text">¿Qué implica el principio de "uso proporcional de la fuerza" en el roleplay policial?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q30" value="a"/><span class="option-circle">A</span> Siempre usar la fuerza máxima disponible para resolver situaciones rápidamente</label>
-        <label class="option-label"><input type="radio" name="q30" value="b"/><span class="option-circle">B</span> La fuerza utilizada debe ser equivalente a la amenaza presentada; escalar o desescalar según la situación</label>
-        <label class="option-label"><input type="radio" name="q30" value="c"/><span class="option-circle">C</span> Solo usar la fuerza cuando lo autorice el General por radio</label>
-        <label class="option-label"><input type="radio" name="q30" value="d"/><span class="option-circle">D</span> Aplicar siempre la misma respuesta sin importar el nivel de amenaza</label>
+        <label class="option-label"><input type="radio" name="q30" value="b"/><span class="option-circle">B</span> Solo usar la fuerza cuando lo autorice el General por radio</label>
+        <label class="option-label"><input type="radio" name="q30" value="c"/><span class="option-circle">C</span> Aplicar siempre la misma respuesta sin importar el nivel de amenaza</label>
+        <label class="option-label"><input type="radio" name="q30" value="d"/><span class="option-circle">D</span> La fuerza utilizada debe ser equivalente a la amenaza presentada; escalar o desescalar según la situación</label>
       </div>
       <div class="feedback-msg" id="fb30"></div>
     </div>
 
+    <!-- Q31 — correct: b -->
     <div class="question-card" id="q31">
       <div class="question-number">Pregunta 31</div>
       <div class="question-text">Un civil presenta una queja formal contra un oficial por abuso de autoridad. ¿Cómo debe manejarse?</div>
@@ -948,50 +969,54 @@
       <div class="feedback-msg" id="fb31"></div>
     </div>
 
+    <!-- Q32 — correct: a -->
     <div class="question-card" id="q32">
       <div class="question-number">Pregunta 32</div>
       <div class="question-text">¿Qué se entiende por "conducta no acorde al rol" en el servidor?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q32" value="a"/><span class="option-circle">A</span> Jugar demasiado serio en escenas de roleplay ligero</label>
-        <label class="option-label"><input type="radio" name="q32" value="b"/><span class="option-circle">B</span> Comportarse de manera que rompe la inmersión del juego: reírse de escenas serias, salir del personaje sin motivo, o actuar de forma que daña la experiencia de otros jugadores</label>
+        <label class="option-label"><input type="radio" name="q32" value="a"/><span class="option-circle">A</span> Comportarse de manera que rompe la inmersión del juego: reírse de escenas serias, salir del personaje sin motivo, o actuar de forma que daña la experiencia de otros jugadores</label>
+        <label class="option-label"><input type="radio" name="q32" value="b"/><span class="option-circle">B</span> Jugar demasiado serio en escenas de roleplay ligero</label>
         <label class="option-label"><input type="radio" name="q32" value="c"/><span class="option-circle">C</span> Tener un personaje demasiado detallado con historia de fondo</label>
         <label class="option-label"><input type="radio" name="q32" value="d"/><span class="option-circle">D</span> Negarse a participar en escenas de acción</label>
       </div>
       <div class="feedback-msg" id="fb32"></div>
     </div>
 
+    <!-- Q33 — correct: c -->
     <div class="question-card" id="q33">
       <div class="question-number">Pregunta 33</div>
       <div class="question-text">¿Cuál es la consecuencia de hacer "troll" o sabotear intencionalmente escenas de roleplay de otros jugadores?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q33" value="a"/><span class="option-circle">A</span> Una advertencia verbal que no queda registrada</label>
-        <label class="option-label"><input type="radio" name="q33" value="b"/><span class="option-circle">B</span> Dependiendo de la gravedad: warn, kick temporal o ban permanente según el reglamento del servidor</label>
-        <label class="option-label"><input type="radio" name="q33" value="c"/><span class="option-circle">C</span> Solo se aplica si el Sargento lo reporta directamente al staff</label>
+        <label class="option-label"><input type="radio" name="q33" value="b"/><span class="option-circle">B</span> Solo se aplica si el Sargento lo reporta directamente al staff</label>
+        <label class="option-label"><input type="radio" name="q33" value="c"/><span class="option-circle">C</span> Dependiendo de la gravedad: warn, kick temporal o ban permanente según el reglamento del servidor</label>
         <label class="option-label"><input type="radio" name="q33" value="d"/><span class="option-circle">D</span> Ninguna, es parte del juego libre</label>
       </div>
       <div class="feedback-msg" id="fb33"></div>
     </div>
 
+    <!-- Q34 — correct: a -->
     <div class="question-card" id="q34">
       <div class="question-number">Pregunta 34</div>
-      <div class="question-text">¿Qué significa "NVL" (No Valuar la Vida) en el roleplay?</div>
+      <div class="question-text">¿Qué significa "NVL" (No Valorar la Vida) en el roleplay?</div>
       <div class="options">
-        <label class="option-label"><input type="radio" name="q34" value="a"/><span class="option-circle">A</span> Una técnica de infiltración utilizada por agentes encubiertos</label>
-        <label class="option-label"><input type="radio" name="q34" value="b"/><span class="option-circle">C</span> Actuar de manera temeraria e irreal sin dar importancia a la vida del personaje, como atacar a varios armados sin ninguna posibilidad de sobrevivir</label>
+        <label class="option-label"><input type="radio" name="q34" value="a"/><span class="option-circle">A</span> Actuar de manera temeraria e irreal sin dar importancia a la vida del personaje, como atacar a varios armados sin ninguna posibilidad de sobrevivir</label>
+        <label class="option-label"><input type="radio" name="q34" value="b"/><span class="option-circle">B</span> Una técnica de infiltración utilizada por agentes encubiertos</label>
         <label class="option-label"><input type="radio" name="q34" value="c"/><span class="option-circle">C</span> Una sanción que se aplica por abandonar escenas activas</label>
         <label class="option-label"><input type="radio" name="q34" value="d"/><span class="option-circle">D</span> No tener un personaje desarrollado dentro del servidor</label>
       </div>
       <div class="feedback-msg" id="fb34"></div>
     </div>
 
+    <!-- Q35 — correct: d -->
     <div class="question-card" id="q35">
       <div class="question-number">Pregunta 35</div>
-      <div class="question-text">Si un oficial presencia a un superior cometiendo una falta grave al reglamento (no solo una orden cuestionable), ¿cuál es el paso más correcto?</div>
+      <div class="question-text">Si un oficial presencia a un superior cometiendo una falta grave al reglamento, ¿cuál es el paso más correcto?</div>
       <div class="options">
         <label class="option-label"><input type="radio" name="q35" value="a"/><span class="option-circle">A</span> Confrontarlo en público frente a todos los jugadores para dejar evidencia</label>
-        <label class="option-label"><input type="radio" name="q35" value="b"/><span class="option-circle">B</span> Documentar la situación (captura, hora, descripción) y reportarla al rango inmediatamente superior o al staff de administración por los canales oficiales del servidor</label>
-        <label class="option-label"><input type="radio" name="q35" value="c"/><span class="option-circle">C</span> Ignorarlo porque cuestionar a un superior puede resultar en sanción propia</label>
-        <label class="option-label"><input type="radio" name="q35" value="d"/><span class="option-circle">D</span> Abandonar el servidor indefinidamente en señal de protesta</label>
+        <label class="option-label"><input type="radio" name="q35" value="b"/><span class="option-circle">B</span> Ignorarlo porque cuestionar a un superior puede resultar en sanción propia</label>
+        <label class="option-label"><input type="radio" name="q35" value="c"/><span class="option-circle">C</span> Abandonar el servidor indefinidamente en señal de protesta</label>
+        <label class="option-label"><input type="radio" name="q35" value="d"/><span class="option-circle">D</span> Documentar la situación (captura, hora, descripción) y reportarla al rango inmediatamente superior o al staff de administración por los canales oficiales del servidor</label>
       </div>
       <div class="feedback-msg" id="fb35"></div>
     </div>
@@ -1028,9 +1053,7 @@
         </div>
       </div>
 
-      <div class="result-msg-box" id="result-msg-box">
-        —
-      </div>
+      <div class="result-msg-box" id="result-msg-box">—</div>
 
       <div style="margin-top:24px;">
         <button class="btn btn-primary" onclick="restartQuiz()">🔄 Reiniciar Evaluación</button>
@@ -1046,52 +1069,53 @@
 
   const TOTAL = 35;
 
+  // Respuestas correctas — distribuidas entre a, b, c, d
   const answers = {
-    q1:'b', q2:'b', q3:'c', q4:'c', q5:'c',
-    q6:'b', q7:'b', q8:'b', q9:'b', q10:'b',
-    q11:'b', q12:'b', q13:'b', q14:'b', q15:'b',
-    q16:'b', q17:'b', q18:'b', q19:'b', q20:'b',
-    q21:'b', q22:'c', q23:'c', q24:'b', q25:'b',
-    q26:'b', q27:'b', q28:'b', q29:'b', q30:'b',
-    q31:'b', q32:'b', q33:'b', q34:'b', q35:'b'
+    q1:'b',  q2:'c',  q3:'a',  q4:'d',  q5:'a',
+    q6:'c',  q7:'b',  q8:'d',  q9:'a',  q10:'c',
+    q11:'b', q12:'d', q13:'a', q14:'c', q15:'b',
+    q16:'d', q17:'a', q18:'c', q19:'b', q20:'d',
+    q21:'c', q22:'a', q23:'d', q24:'b', q25:'a',
+    q26:'c', q27:'d', q28:'b', q29:'a', q30:'d',
+    q31:'b', q32:'a', q33:'c', q34:'a', q35:'d'
   };
 
   const feedbacks = {
-    q1:  { ok:'✔ Correcto. Identificarse es el primer paso del protocolo.',         fail:'✘ Incorrecto. Siempre debes identificarte antes de cualquier acción.' },
-    q2:  { ok:'✔ Correcto. 10-4 = Mensaje recibido / Entendido.',                   fail:'✘ Incorrecto. 10-4 significa "Mensaje recibido".' },
-    q3:  { ok:'✔ Correcto. 10-76 indica "En camino / en ruta".',                    fail:'✘ Incorrecto. El código correcto es 10-76 (en ruta a la escena).' },
-    q4:  { ok:'✔ Correcto. Informar, solicitar salir del vehículo y reportar.',      fail:'✘ Incorrecto. Hay un procedimiento antes de escalar la situación.' },
-    q5:  { ok:'✔ Correcto. Solo ante amenaza real e inminente.',                     fail:'✘ Incorrecto. La fuerza letal es el último recurso.' },
-    q6:  { ok:'✔ Correcto. Esposar, informar, cachear y documentar.',               fail:'✘ Incorrecto. El procedimiento de registro incluye informar al detenido.' },
-    q7:  { ok:'✔ Correcto. Asegurar el perímetro externo y esperar apoyo.',         fail:'✘ Incorrecto. Nunca entrar solo a una escena activa sin apoyo.' },
-    q8:  { ok:'✔ Correcto. Powergaming es forzar acciones irreales.',               fail:'✘ Incorrecto. Powergaming = forzar acciones imposibles sobre otros.' },
-    q9:  { ok:'✔ Correcto. Metagaming = usar info OOC dentro del RP.',             fail:'✘ Incorrecto. Metagaming es usar información fuera del personaje dentro del rol.' },
-    q10: { ok:'✔ Correcto. RDM está prohibido y es sancionado gravemente.',         fail:'✘ Incorrecto. RDM = matar sin razón de RP, es una falta grave.' },
-    q11: { ok:'✔ Correcto. VDM está estrictamente prohibido.',                      fail:'✘ Incorrecto. VDM es atropellar intencionalmente y está prohibido.' },
-    q12: { ok:'✔ Correcto. El CK es muerte permanente bajo condiciones especiales.',fail:'✘ Incorrecto. CK es la muerte permanente del personaje, no un cambio libre.' },
-    q13: { ok:'✔ Correcto. Calma, aislamiento y comunicación son clave.',           fail:'✘ Incorrecto. En negociación de rehenes la coordinación es lo primero.' },
-    q14: { ok:'✔ Correcto. FearRP = actuar con miedo realista ante amenazas.',      fail:'✘ Incorrecto. FearRP obliga al personaje a reaccionar humanamente ante el peligro.' },
-    q15: { ok:'✔ Correcto. Postulante → Cadete → Oficial → Sargento → Teniente → General.', fail:'✘ Incorrecto. El orden correcto es: Postulante → Cadete → Oficial → Sargento → Teniente → General.' },
-    q16: { ok:'✔ Correcto. Obedecer y luego reportar por canales adecuados.',       fail:'✘ Incorrecto. Se obedece primero y luego se escala el problema.' },
-    q17: { ok:'✔ Correcto. El Sargento supervisa y guía a los rangos inferiores.',  fail:'✘ Incorrecto. El Sargento tiene un rol de supervisión y mentoría.' },
-    q18: { ok:'✔ Correcto. Un General lidera con el ejemplo y profesionalismo.',    fail:'✘ Incorrecto. El General es el pilar del servidor y debe dar el mejor ejemplo.' },
-    q19: { ok:'✔ Correcto. Negarse, documentar y reportar es lo correcto.',        fail:'✘ Incorrecto. Ningún rango puede ordenar violar el reglamento del servidor.' },
-    q20: { ok:'✔ Correcto. El Postulante debe aprender antes de asumir funciones.', fail:'✘ Incorrecto. Los postulantes deben entrenarse antes de operar de forma independiente.' },
-    q21: { ok:'✔ Correcto. Cobertura, evaluación y comunicación son lo primero.',   fail:'✘ Incorrecto. Nunca entres sin cobertura y sin comunicar.' },
-    q22: { ok:'✔ Correcto. El perímetro contiene la escena y protege civiles.',     fail:'✘ Incorrecto. Un perímetro es la zona de contención de la escena.' },
-    q23: { ok:'✔ Correcto. Reportar por los canales internos con evidencia.',       fail:'✘ Incorrecto. La corrupción debe reportarse al superior por los canales correctos.' },
-    q24: { ok:'✔ Correcto. Mantener distancia táctica con cobertura disponible.',   fail:'✘ Incorrecto. La distancia táctica permite tiempo de reacción ante ataques.' },
-    q25: { ok:'✔ Correcto. Distancia, cobertura, instrucciones y refuerzos.',       fail:'✘ Incorrecto. Al detenerse el sospechoso, la situación puede ser una trampa.' },
-    q26: { ok:'✔ Correcto. Un reporte completo incluye todos esos datos.',          fail:'✘ Incorrecto. El reporte de arresto debe ser completo y detallado.' },
-    q27: { ok:'✔ Correcto. 10-7 = fuera de servicio.',                             fail:'✘ Incorrecto. El código 10-7 indica que la unidad está fuera de servicio.' },
-    q28: { ok:'✔ Correcto. 10-99 = emergencia crítica / oficial en peligro.',      fail:'✘ Incorrecto. El 10-99 es para emergencias críticas del oficial.' },
-    q29: { ok:'✔ Correcto. La claridad en radio salva vidas en situaciones críticas.', fail:'✘ Incorrecto. La disciplina en radio es esencial para la coordinación táctica.' },
-    q30: { ok:'✔ Correcto. La fuerza debe ser siempre proporcional a la amenaza.',  fail:'✘ Incorrecto. La proporcionalidad es un principio fundamental del uso de la fuerza.' },
-    q31: { ok:'✔ Correcto. Las quejas deben investigarse por canales internos.',    fail:'✘ Incorrecto. Todas las quejas deben registrarse e investigarse adecuadamente.' },
-    q32: { ok:'✔ Correcto. Romper la inmersión daña la experiencia de todos.',      fail:'✘ Incorrecto. La conducta no acorde al rol perjudica la calidad del servidor.' },
-    q33: { ok:'✔ Correcto. El troll tiene consecuencias progresivas según gravedad.', fail:'✘ Incorrecto. El sabotaje intencional tiene consecuencias definidas en el reglamento.' },
-    q34: { ok:'✔ Correcto. NVL = actuar sin valorar la vida del personaje.',        fail:'✘ Incorrecto. NVL significa No Valorar la Vida, actuar de forma irreal y temeraria.' },
-    q35: { ok:'✔ Correcto. Documentar y reportar por canales oficiales es lo correcto.', fail:'✘ Incorrecto. Las faltas graves deben reportarse con evidencia al staff o rango superior.' }
+    q1:  { ok:'✔ Correcto. Identificarte es siempre el primer paso del protocolo.',         fail:'✘ Incorrecto. Siempre debes identificarte antes de cualquier acción.' },
+    q2:  { ok:'✔ Correcto. 10-4 = Copiado / Mensaje recibido.',                             fail:'✘ Incorrecto. 10-4 significa "Copiado / Mensaje recibido".' },
+    q3:  { ok:'✔ Correcto. 10-74 indica "Hacia un destino / en ruta".',                     fail:'✘ Incorrecto. El código correcto para ir hacia un destino es 10-74.' },
+    q4:  { ok:'✔ Correcto. Informar, solicitar salir del vehículo y reportar por radio.',    fail:'✘ Incorrecto. Hay un procedimiento antes de escalar la situación.' },
+    q5:  { ok:'✔ Correcto. Solo ante amenaza real e inminente y agotadas otras opciones.',   fail:'✘ Incorrecto. La fuerza letal es el último recurso.' },
+    q6:  { ok:'✔ Correcto. Esposar, informar, cachear y documentar.',                       fail:'✘ Incorrecto. El procedimiento de registro incluye informar al detenido.' },
+    q7:  { ok:'✔ Correcto. Asegurar el perímetro externo y esperar apoyo.',                 fail:'✘ Incorrecto. Nunca entrar solo a una escena activa sin apoyo.' },
+    q8:  { ok:'✔ Correcto. Powergaming = forzar acciones imposibles sobre otros jugadores.',fail:'✘ Incorrecto. Powergaming es forzar acciones irreales o imposibles sobre terceros.' },
+    q9:  { ok:'✔ Correcto. Metagaming = usar información OOC dentro del RP.',              fail:'✘ Incorrecto. Metagaming es usar información fuera del personaje dentro del rol.' },
+    q10: { ok:'✔ Correcto. RDM está prohibido y es sancionado gravemente.',                 fail:'✘ Incorrecto. RDM = matar sin razón de RP — es una falta grave.' },
+    q11: { ok:'✔ Correcto. VDM está estrictamente prohibido.',                              fail:'✘ Incorrecto. VDM es atropellar intencionalmente y está prohibido.' },
+    q12: { ok:'✔ Correcto. El CK es muerte permanente bajo condiciones especiales.',        fail:'✘ Incorrecto. CK es la muerte permanente del personaje, no un cambio libre.' },
+    q13: { ok:'✔ Correcto. Calma, aislamiento y comunicación coordinada son clave.',        fail:'✘ Incorrecto. En negociación de rehenes la coordinación es lo primero.' },
+    q14: { ok:'✔ Correcto. FearRP = actuar con miedo realista ante amenazas directas.',     fail:'✘ Incorrecto. FearRP obliga al personaje a reaccionar humanamente ante el peligro.' },
+    q15: { ok:'✔ Correcto. Postulante → Cadete → Oficial → Sargento → Teniente → General.',fail:'✘ Incorrecto. El orden correcto es: Postulante → Cadete → Oficial → Sargento → Teniente → General.' },
+    q16: { ok:'✔ Correcto. Se obedece primero y luego se escala el problema por canales.',  fail:'✘ Incorrecto. Hay que obedecer primero y luego reportar el desacuerdo correctamente.' },
+    q17: { ok:'✔ Correcto. El Sargento supervisa y guía a los rangos inferiores.',          fail:'✘ Incorrecto. El Sargento tiene un rol de supervisión y mentoría activa.' },
+    q18: { ok:'✔ Correcto. Un General lidera con el ejemplo y profesionalismo.',            fail:'✘ Incorrecto. El General es el pilar del servidor y debe dar el mejor ejemplo.' },
+    q19: { ok:'✔ Correcto. Negarse, documentar y reportar por los canales internos.',      fail:'✘ Incorrecto. Ningún rango puede ordenar violar el reglamento del servidor.' },
+    q20: { ok:'✔ Correcto. El Postulante debe aprender antes de asumir funciones.',         fail:'✘ Incorrecto. Los postulantes deben entrenarse antes de operar de forma independiente.' },
+    q21: { ok:'✔ Correcto. Cobertura, evaluación y comunicación son lo primero.',           fail:'✘ Incorrecto. Nunca entres a una zona de tiroteo sin cobertura y sin comunicar.' },
+    q22: { ok:'✔ Correcto. El perímetro contiene la escena y protege a los civiles.',       fail:'✘ Incorrecto. Un perímetro es la zona de contención alrededor de la escena.' },
+    q23: { ok:'✔ Correcto. Reportar por los canales internos con evidencia.',               fail:'✘ Incorrecto. La corrupción debe reportarse al superior por los canales correctos.' },
+    q24: { ok:'✔ Correcto. Mantener distancia táctica con cobertura disponible.',           fail:'✘ Incorrecto. La distancia táctica permite tiempo de reacción ante ataques.' },
+    q25: { ok:'✔ Correcto. Distancia, cobertura, instrucciones por altavoz y refuerzos.',  fail:'✘ Incorrecto. Al detenerse el sospechoso, la situación puede ser una trampa.' },
+    q26: { ok:'✔ Correcto. Un reporte completo incluye todos esos datos.',                  fail:'✘ Incorrecto. El reporte de arresto debe ser completo y detallado.' },
+    q27: { ok:'✔ Correcto. 10-7 = Fuera de servicio.',                                     fail:'✘ Incorrecto. El código 10-7 indica que la unidad está fuera de servicio.' },
+    q28: { ok:'✔ Correcto. 10-50 = EMERGENCIA — respuesta inmediata de todas las unidades.',fail:'✘ Incorrecto. El código de emergencia crítica en el servidor es el 10-50.' },
+    q29: { ok:'✔ Correcto. 10-30 = Silencio en la radio.',                                  fail:'✘ Incorrecto. Para pedir silencio en el canal se usa el código 10-30.' },
+    q30: { ok:'✔ Correcto. La fuerza debe ser siempre proporcional a la amenaza.',          fail:'✘ Incorrecto. La proporcionalidad es un principio fundamental del uso de la fuerza.' },
+    q31: { ok:'✔ Correcto. Las quejas deben registrarse e investigarse por canales internos.',fail:'✘ Incorrecto. Todas las quejas deben registrarse e investigarse adecuadamente.' },
+    q32: { ok:'✔ Correcto. Romper la inmersión daña la experiencia de todos.',              fail:'✘ Incorrecto. La conducta no acorde al rol perjudica la calidad del servidor.' },
+    q33: { ok:'✔ Correcto. El troll tiene consecuencias progresivas según la gravedad.',    fail:'✘ Incorrecto. El sabotaje intencional tiene consecuencias definidas en el reglamento.' },
+    q34: { ok:'✔ Correcto. NVL = actuar sin valorar la vida del personaje de forma irreal.',fail:'✘ Incorrecto. NVL significa No Valorar la Vida — actuar de forma irreal y temeraria.' },
+    q35: { ok:'✔ Correcto. Documentar y reportar por canales oficiales es lo correcto.',    fail:'✘ Incorrecto. Las faltas graves deben reportarse con evidencia al staff o rango superior.' }
   };
 
   // Selección de opciones
@@ -1162,7 +1186,6 @@
     const pct = Math.round((score / TOTAL) * 100);
     const wrong = TOTAL - score;
 
-    // Determinar mensaje
     let msgClass, msgIcon, msgTitle, msgText;
     if (pct >= 90) {
       msgClass = 'excellent';
@@ -1186,7 +1209,6 @@
       msgText = 'Resultado insuficiente. Se recomienda estudiar el reglamento completo del servidor, las normativas de RP y los protocolos policiales antes de volver a presentar la evaluación.';
     }
 
-    // Mostrar sección de resultados
     document.getElementById('quiz-section').style.display = 'none';
     const rs = document.getElementById('result-section');
     rs.style.display = 'block';
@@ -1202,7 +1224,6 @@
     msgBox.className = `result-msg-box ${msgClass}`;
     msgBox.innerHTML = `<strong>${msgTitle}</strong><br><br>${msgText}`;
 
-    // Enviar correo
     sendResultEmail(name, officerRank, discord, score, pct, msgTitle);
   }
 
@@ -1245,4 +1266,3 @@
 </script>
 </body>
 </html>
-
